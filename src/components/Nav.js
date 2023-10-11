@@ -5,12 +5,7 @@ import {CgMenu, CgClose} from 'react-icons/cg';
 import { NavLink } from 'react-router-dom';
 import { useCartContext } from '../context/cart_context';
 
-const Nav = () => {
-
-  const [menuIcon, setMenuIcon] = useState();
-  const {total_item} = useCartContext();
-
-  const Nav = styled.nav`
+const NavStyled = styled.nav`
   .navbar-lists {
     display: flex;
     gap: 4.5rem;
@@ -166,8 +161,13 @@ const Nav = () => {
 `;
 
 
+const Nav = () => {
+
+  const [menuIcon, setMenuIcon] = useState();
+  const {total_item} = useCartContext();
+
   return (
-    <Nav>
+    <NavStyled>
       <div className={menuIcon ? "navbar active" : "navbar"}>
         <ul className='navbar-lists'>
           <li>
@@ -199,7 +199,7 @@ const Nav = () => {
            />
         </div>
       </div>
-    </Nav>
+    </NavStyled>
   )
 }
 export default Nav
