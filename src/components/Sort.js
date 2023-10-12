@@ -22,7 +22,7 @@ const Sort = () => {
 
 
       <div className='product-data'>
-        <p>{`${filter_products.length} Product Available`}</p>
+        <h3>{`${filter_products.length} Product Available`}</h3>
       </div>
 
 
@@ -83,6 +83,17 @@ const Wrapper = styled.section`
       padding: 10px;
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap: 20px;
+
+  }
+
 `;
 
 export default Sort
+
+

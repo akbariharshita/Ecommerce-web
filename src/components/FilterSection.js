@@ -186,7 +186,6 @@ const Wrapper = styled.section`
 
   .filter-color-style {
     display: flex;
-    justify-content: center;
   }
 
   .color-all--style {

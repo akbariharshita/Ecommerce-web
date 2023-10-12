@@ -14,7 +14,7 @@ const HeroSection = ({myData}) => {
             <p className='intro-data'>Welcome to</p>
             <h2> {name} </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-            <NavLink>
+            <NavLink to="/products">
               <Button>Show Now</Button>
             </NavLink>
           </div>
@@ -61,6 +61,7 @@ img {
 }
 figure {
   position: relative;
+  margin-right: 20px;
 
   &::after {
     content: "";
@@ -82,16 +83,22 @@ figure {
   .grid {
     gap: 10rem;
   }
+  figure{
+    margin-right:0;
+  }
 
   figure::after {
     content: "";
-    width: 50%;
-    height: 70%;
-    left: -50px;
-    top: 38%;
-    background-color: rgba(81,56,238,0.4);
+    visibility: hidden;
+   
   }
 }
 `;
 
 export default HeroSection
+
+// width: 50%;
+// height: 70%;
+// left: -50px;
+// top: 38%;
+// background-color: rgba(81,56,238,0.4);
